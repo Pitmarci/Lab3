@@ -8,7 +8,20 @@ Hint: Sum of divisors implies applying summation: a loop, and summing in the acc
 #include <stdio.h>
 
 int main(){
+    int n, d;
+    int s = 0;
+    
+    printf("Please enter a number: \n");
+    scanf("%d",&n);
 
-
+    for(int i = 1; i < n; i++){
+        if(n%i == 0){
+            s = s + i;
+        }
+    }
+    printf("The sum of the divisors is %d.\n",s);
+    if(s == n){
+        printf("%d is a perfect number!",n);
+    }
 
 }

@@ -12,9 +12,20 @@ Hint: if you have used nested loops, try to simplify your solution! A single loo
 
 #include<stdio.h>
 
-int main()
-{
+int factor (int x){
+    double y = x;
+    for(int i = y; i >= 2; i -= 1){
+        y = (i)*y;
+        
+    }
+    return y;
+}
 
-
-
+int main(){
+    double e = 1;
+    for(int i = 1; i < 15; i++){
+        e = e + 1.0/factor(i);
+    }
+    printf("Euler's number = %f",e);
+    return 0;
 }

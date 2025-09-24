@@ -12,10 +12,13 @@ As long as n≥2
 End of repetition
 Print the pruduct.*/
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main(){
-
-
-
+    int product = 1;
+    for(int n = 10; n >= 2; n -= 1){
+        product = product*n;
+        printf("%d\n",product);
+    }
+    return 0;
 }
